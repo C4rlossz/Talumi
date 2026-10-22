@@ -1,0 +1,17 @@
+[
+  {
+    "arquivo": "app/src/main/res/drawable/chip.xml",
+    "sha256": "81569bad69f04cc9bc24cddde8073f72fca078e0dfb8ef1df80754837ad03355",
+    "tipo": ".xml"
+  },
+  {
+    "arquivo": "app/src/main/res/drawable/chip_mono.xml",
+    "sha256": "84495d52802ef853a9ca170e7874e35afff85e62480c0358744b15f9fc7c9685",
+    "tipo": ".xml"
+  },
+  {
+    "arquivo": "app/src/main/res/mipmap-anydpi/ic_launcher.xml",
+    "sha256": "23656dc5c8e2e4c0992036d7b5a31741f4f9e2ea8710ef4691d30d4f296a4d2a",
+    "tipo": ".xml"
+  }
+]

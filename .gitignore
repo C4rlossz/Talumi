@@ -1,0 +1,25 @@
+.gradle/
+.kotlin/
+**/build/
+local.properties
+*.jks
+*.keystore
+.idea/
+
+# Dados e segredos locais: nunca publicar
+*.apk
+*.aab
+*.db
+*.db-*
+*.sqlite*
+*.pem
+*.p12
+*.pfx
+.env
+.env.*
+signing.properties
+keystore.properties
+*.hprof
+backups/
+talumi-backup-*.json
+solicitacao-*.txt

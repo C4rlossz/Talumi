@@ -1,0 +1,15 @@
+allprojects { p ->
+ if(p.path == ':app') {
+  tasks.register('auditResolvedRuntime') {
+   doLast {
+    def lines=['coordinate\tfile']
+    p.configurations.getByName('debugRuntimeClasspath').resolvedConfiguration.resolvedArtifacts.each { a ->
+     lines.add("${a.moduleVersion.id.group}:${a.name}:${a.moduleVersion.id.version}\t${a.file.absolutePath}")
+    }
+    def target=new File(p.rootProject.projectDir,'build/audit/runtime-resolved.tsv')
+    target.parentFile.mkdirs()
+    target.setText(lines.sort().join('\n')+'\n','UTF-8')
+   }
+  }
+ }
+}

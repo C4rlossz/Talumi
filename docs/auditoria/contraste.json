@@ -1,0 +1,382 @@
+{
+  "data": "2026-10-22",
+  "metodo": "Luminância relativa sRGB WCAG; cores explícitas e 1001 amostras do gradiente; sem captura de tela",
+  "pares": [
+    {
+      "par": "Claro: texto/fundo",
+      "texto_ou_grafico": "171322",
+      "fundo": "F8F7FC",
+      "razao": 17.091704,
+      "minimo": 4.5,
+      "resultado": "APROVADO"
+    },
+    {
+      "par": "Claro: muted/fundo",
+      "texto_ou_grafico": "686176",
+      "fundo": "F8F7FC",
+      "razao": 5.53392,
+      "minimo": 4.5,
+      "resultado": "APROVADO"
+    },
+    {
+      "par": "Claro: positivo/fundo",
+      "texto_ou_grafico": "0F765E",
+      "fundo": "F8F7FC",
+      "razao": 5.221205,
+      "minimo": 4.5,
+      "resultado": "APROVADO"
+    },
+    {
+      "par": "Claro: erro/fundo",
+      "texto_ou_grafico": "BA3550",
+      "fundo": "F8F7FC",
+      "razao": 5.306164,
+      "minimo": 4.5,
+      "resultado": "APROVADO"
+    },
+    {
+      "par": "Claro: texto/superficie",
+      "texto_ou_grafico": "171322",
+      "fundo": "FFFFFF",
+      "razao": 18.218424,
+      "minimo": 4.5,
+      "resultado": "APROVADO"
+    },
+    {
+      "par": "Claro: muted/superficie",
+      "texto_ou_grafico": "686176",
+      "fundo": "FFFFFF",
+      "razao": 5.898727,
+      "minimo": 4.5,
+      "resultado": "APROVADO"
+    },
+    {
+      "par": "Claro: positivo/superficie",
+      "texto_ou_grafico": "0F765E",
+      "fundo": "FFFFFF",
+      "razao": 5.565398,
+      "minimo": 4.5,
+      "resultado": "APROVADO"
+    },
+    {
+      "par": "Claro: erro/superficie",
+      "texto_ou_grafico": "BA3550",
+      "fundo": "FFFFFF",
+      "razao": 5.655957,
+      "minimo": 4.5,
+      "resultado": "APROVADO"
+    },
+    {
+      "par": "Claro: texto/variante",
+      "texto_ou_grafico": "171322",
+      "fundo": "F0ECF8",
+      "razao": 15.666714,
+      "minimo": 4.5,
+      "resultado": "APROVADO"
+    },
+    {
+      "par": "Claro: muted/variante",
+      "texto_ou_grafico": "686176",
+      "fundo": "F0ECF8",
+      "razao": 5.072539,
+      "minimo": 4.5,
+      "resultado": "APROVADO"
+    },
+    {
+      "par": "Claro: positivo/variante",
+      "texto_ou_grafico": "0F765E",
+      "fundo": "F0ECF8",
+      "razao": 4.785896,
+      "minimo": 4.5,
+      "resultado": "APROVADO"
+    },
+    {
+      "par": "Claro: erro/variante",
+      "texto_ou_grafico": "BA3550",
+      "fundo": "F0ECF8",
+      "razao": 4.863772,
+      "minimo": 4.5,
+      "resultado": "APROVADO"
+    },
+    {
+      "par": "Claro: botão principal",
+      "texto_ou_grafico": "FFFFFF",
+      "fundo": "7047EB",
+      "razao": 5.541079,
+      "minimo": 4.5,
+      "resultado": "APROVADO"
+    },
+    {
+      "par": "Claro: contêiner primário",
+      "texto_ou_grafico": "3F248D",
+      "fundo": "EDE7FF",
+      "razao": 9.454676,
+      "minimo": 4.5,
+      "resultado": "APROVADO"
+    },
+    {
+      "par": "Claro: ícone primário em contêiner",
+      "texto_ou_grafico": "7047EB",
+      "fundo": "EDE7FF",
+      "razao": 4.61104,
+      "minimo": 3,
+      "resultado": "APROVADO"
+    },
+    {
+      "par": "Claro: limite de campo",
+      "texto_ou_grafico": "827A91",
+      "fundo": "FFFFFF",
+      "razao": 4.084137,
+      "minimo": 3,
+      "resultado": "APROVADO"
+    },
+    {
+      "par": "Escuro: texto/fundo",
+      "texto_ou_grafico": "F5F2FA",
+      "fundo": "121019",
+      "razao": 17.025069,
+      "minimo": 4.5,
+      "resultado": "APROVADO"
+    },
+    {
+      "par": "Escuro: muted/fundo",
+      "texto_ou_grafico": "BAB1CD",
+      "fundo": "121019",
+      "razao": 9.209513,
+      "minimo": 4.5,
+      "resultado": "APROVADO"
+    },
+    {
+      "par": "Escuro: positivo/fundo",
+      "texto_ou_grafico": "62D7B0",
+      "fundo": "121019",
+      "razao": 10.653299,
+      "minimo": 4.5,
+      "resultado": "APROVADO"
+    },
+    {
+      "par": "Escuro: erro/fundo",
+      "texto_ou_grafico": "FF8FA3",
+      "fundo": "121019",
+      "razao": 8.717196,
+      "minimo": 4.5,
+      "resultado": "APROVADO"
+    },
+    {
+      "par": "Escuro: texto/superficie",
+      "texto_ou_grafico": "F5F2FA",
+      "fundo": "1E192A",
+      "razao": 15.446716,
+      "minimo": 4.5,
+      "resultado": "APROVADO"
+    },
+    {
+      "par": "Escuro: muted/superficie",
+      "texto_ou_grafico": "BAB1CD",
+      "fundo": "1E192A",
+      "razao": 8.355722,
+      "minimo": 4.5,
+      "resultado": "APROVADO"
+    },
+    {
+      "par": "Escuro: positivo/superficie",
+      "texto_ou_grafico": "62D7B0",
+      "fundo": "1E192A",
+      "razao": 9.665658,
+      "minimo": 4.5,
+      "resultado": "APROVADO"
+    },
+    {
+      "par": "Escuro: erro/superficie",
+      "texto_ou_grafico": "FF8FA3",
+      "fundo": "1E192A",
+      "razao": 7.909046,
+      "minimo": 4.5,
+      "resultado": "APROVADO"
+    },
+    {
+      "par": "Escuro: texto/variante",
+      "texto_ou_grafico": "F5F2FA",
+      "fundo": "2A2338",
+      "razao": 13.5847,
+      "minimo": 4.5,
+      "resultado": "APROVADO"
+    },
+    {
+      "par": "Escuro: muted/variante",
+      "texto_ou_grafico": "BAB1CD",
+      "fundo": "2A2338",
+      "razao": 7.348485,
+      "minimo": 4.5,
+      "resultado": "APROVADO"
+    },
+    {
+      "par": "Escuro: positivo/variante",
+      "texto_ou_grafico": "62D7B0",
+      "fundo": "2A2338",
+      "razao": 8.500516,
+      "minimo": 4.5,
+      "resultado": "APROVADO"
+    },
+    {
+      "par": "Escuro: erro/variante",
+      "texto_ou_grafico": "FF8FA3",
+      "fundo": "2A2338",
+      "razao": 6.955654,
+      "minimo": 4.5,
+      "resultado": "APROVADO"
+    },
+    {
+      "par": "Escuro: botão principal",
+      "texto_ou_grafico": "24104E",
+      "fundo": "B69AFF",
+      "razao": 7.191611,
+      "minimo": 4.5,
+      "resultado": "APROVADO"
+    },
+    {
+      "par": "Escuro: contêiner primário",
+      "texto_ou_grafico": "EDE7FF",
+      "fundo": "34224F",
+      "razao": 11.746293,
+      "minimo": 4.5,
+      "resultado": "APROVADO"
+    },
+    {
+      "par": "Escuro: ícone primário em contêiner",
+      "texto_ou_grafico": "B69AFF",
+      "fundo": "34224F",
+      "razao": 6.086641,
+      "minimo": 3,
+      "resultado": "APROVADO"
+    },
+    {
+      "par": "Escuro: limite de campo",
+      "texto_ou_grafico": "8E839F",
+      "fundo": "1E192A",
+      "razao": 4.80359,
+      "minimo": 3,
+      "resultado": "APROVADO"
+    },
+    {
+      "par": "Gráfico: fatia 1 / claro",
+      "texto_ou_grafico": "7047EB",
+      "fundo": "FFFFFF",
+      "razao": 5.541079,
+      "minimo": 3,
+      "resultado": "APROVADO"
+    },
+    {
+      "par": "Gráfico: fatia 1 / escuro",
+      "texto_ou_grafico": "7047EB",
+      "fundo": "1E192A",
+      "razao": 3.086998,
+      "minimo": 3,
+      "resultado": "APROVADO"
+    },
+    {
+      "par": "Gráfico: fatia 2 / claro",
+      "texto_ou_grafico": "219F8C",
+      "fundo": "FFFFFF",
+      "razao": 3.279912,
+      "minimo": 3,
+      "resultado": "APROVADO"
+    },
+    {
+      "par": "Gráfico: fatia 2 / escuro",
+      "texto_ou_grafico": "219F8C",
+      "fundo": "1E192A",
+      "razao": 5.215171,
+      "minimo": 3,
+      "resultado": "APROVADO"
+    },
+    {
+      "par": "Gráfico: fatia 3 / claro",
+      "texto_ou_grafico": "9A6500",
+      "fundo": "FFFFFF",
+      "razao": 4.958119,
+      "minimo": 3,
+      "resultado": "APROVADO"
+    },
+    {
+      "par": "Gráfico: fatia 3 / escuro",
+      "texto_ou_grafico": "9A6500",
+      "fundo": "1E192A",
+      "razao": 3.449958,
+      "minimo": 3,
+      "resultado": "APROVADO"
+    },
+    {
+      "par": "Gráfico: fatia 4 / claro",
+      "texto_ou_grafico": "D76B9C",
+      "fundo": "FFFFFF",
+      "razao": 3.24447,
+      "minimo": 3,
+      "resultado": "APROVADO"
+    },
+    {
+      "par": "Gráfico: fatia 4 / escuro",
+      "texto_ou_grafico": "D76B9C",
+      "fundo": "1E192A",
+      "razao": 5.272141,
+      "minimo": 3,
+      "resultado": "APROVADO"
+    },
+    {
+      "par": "Gráfico: fatia 5 / claro",
+      "texto_ou_grafico": "5189D7",
+      "fundo": "FFFFFF",
+      "razao": 3.553667,
+      "minimo": 3,
+      "resultado": "APROVADO"
+    },
+    {
+      "par": "Gráfico: fatia 5 / escuro",
+      "texto_ou_grafico": "5189D7",
+      "fundo": "1E192A",
+      "razao": 4.813423,
+      "minimo": 3,
+      "resultado": "APROVADO"
+    },
+    {
+      "par": "Gráfico: fatia 6 / claro",
+      "texto_ou_grafico": "8C788F",
+      "fundo": "FFFFFF",
+      "razao": 4.039773,
+      "minimo": 3,
+      "resultado": "APROVADO"
+    },
+    {
+      "par": "Gráfico: fatia 6 / escuro",
+      "texto_ou_grafico": "8C788F",
+      "fundo": "1E192A",
+      "razao": 4.234223,
+      "minimo": 3,
+      "resultado": "APROVADO"
+    },
+    {
+      "par": "Texto branco alfa 1 / gradiente (1001 amostras)",
+      "texto_ou_grafico": "FFFFFF alfa 1",
+      "fundo": "6738E8 → 8050D8",
+      "razao": 5.176396,
+      "minimo": 4.5,
+      "resultado": "APROVADO"
+    },
+    {
+      "par": "Texto branco alfa 0.95 / gradiente (1001 amostras)",
+      "texto_ou_grafico": "FFFFFF alfa 0.95",
+      "fundo": "6738E8 → 8050D8",
+      "razao": 4.842851,
+      "minimo": 4.5,
+      "resultado": "APROVADO"
+    },
+    {
+      "par": "Texto branco alfa 0.9 / gradiente (1001 amostras)",
+      "texto_ou_grafico": "FFFFFF alfa 0.9",
+      "fundo": "6738E8 → 8050D8",
+      "razao": 4.523679,
+      "minimo": 4.5,
+      "resultado": "APROVADO"
+    }
+  ]
+}
