@@ -5,6 +5,12 @@
 <p align="center"><strong>Android 8+</strong> · <strong>Kotlin</strong> · <strong>Jetpack Compose</strong> · <strong>SQLite</strong> · <strong>MIT</strong></p>
 <p align="center"><a href="#features">Features</a> · <a href="#guide">User guide</a> · <a href="#development">Build and run</a> · <a href="#audit">Audit</a> · <a href="#license">License and credits</a></p>
 
+## What is new in 1.4.0
+
+- **Relatórios**: animated ring, monthly income minus expenses in the center, month selection and expense categories. Only confirmed finance transactions through today count; transfers and investments remain separate.
+- **Information** beside settings: technologies, local data and Carlos Eduardo’s GitHub and LinkedIn links.
+- [Update and installation guide (Portuguese)](docs/ATUALIZACAO-1.4.0.md). The 1.3.0 audit below is historical; see [current build validation](VALIDACAO.md).
+
 ## The project
 
 **Talumi** is a personal finance organizer conceived and directed by **[Carlos Eduardo](https://github.com/C4rlossz)** as a portfolio project. It brings together income, expenses, salaries, debts and investments, keeping spendable money separate from invested assets.
@@ -69,6 +75,9 @@ app/src/main/java/com/talumi/financas/
 ├── FinanceViewModel.kt   # State and serialized operations
 ├── Investments.kt       # Portfolio and estimates
 ├── InvestmentUi.kt      # Portfolio UI and chart
+├── MonthlyReport.kt     # Monthly report calculations
+├── ReportUi.kt          # Animated monthly report
+├── AboutUi.kt           # App and author information
 ├── MarketRates.kt        # Public CDI / Selic lookups
 ├── SalaryWorker.kt       # Local recurring entries
 └── LegalUi.kt            # Privacy and local forms

@@ -10,9 +10,9 @@ android {
         applicationId = "com.talumi.financas"
         minSdk = 26
         targetSdk = 35
-        versionCode = 4
-        versionName = "1.3.0"
-        resValue("string", "app_version", versionName ?: "1.3.0")
+        versionCode = 5
+        versionName = "1.4.0"
+        resValue("string", "app_version", versionName ?: "1.4.0")
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes { release { isMinifyEnabled = false } }

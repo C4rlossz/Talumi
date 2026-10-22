@@ -24,3 +24,7 @@ Decisão: publicar somente o código, os vetores do projeto com a ressalva de pr
 `docs/assets/talumi-cover.svg`: ilustração vetorial criada nesta etapa com assistência de IA, usando a identidade e o símbolo do Talumi, sem fotografias ou recursos remotos. É uma capa decorativa, não uma captura do aplicativo. Fontes do sistema são apenas referenciadas; nenhum arquivo de fonte é redistribuído. Contribuições originais sob MIT, com as mesmas ressalvas de procedência e exclusividade deste relatório. Não integra os três XML do aplicativo inventariados na auditoria 1.3.0.
 
 SHA-256: `606c7efd76737874b8619d5c7e0b9cf5bf42c4b42a9b7ee4f36da53f0f223433`.
+
+## Acréscimo 1.4.0 — gráfico mensal
+
+`MonthlyRing`, em `ReportUi.kt`, desenha o anel por Canvas com dados locais. A referência enviada não foi incorporada ao APK nem ao código público. Não foram adicionadas imagens raster ou dependências de gráficos.

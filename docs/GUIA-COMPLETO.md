@@ -1,6 +1,6 @@
 # Talumi
 
-Criado por **Carlos Eduardo** — projeto autoral de portfólio. Versão 1.3.0.
+Criado por **Carlos Eduardo** — projeto autoral de portfólio. Versão 1.4.0.
 
 Organizador financeiro Android com Kotlin, Jetpack Compose e SQLite local. Identidade própria baseada no conceito visual Talumi: violeta, lavanda, símbolo de chip e temas claro/escuro.
 
@@ -149,3 +149,7 @@ No aplicativo: Configurações → Privacidade, acessibilidade e licenças. Docu
 - [Publicar no GitHub](PUBLICAR-NO-GITHUB.md) e [Segurança](../SECURITY.md).
 
 Contato do responsável: Carlosz.eduardo1402@gmail.com. Projeto pessoal de portfólio; não há CNPJ informado. A revisão documenta correções e riscos pendentes, sem prometer conformidade jurídica integral, ausência de erros ou certificação de acessibilidade. Consulte VALIDACAO.md para os testes realmente executados.
+
+## Relatórios e informações — 1.4.0
+
+Consulte o [guia da atualização](ATUALIZACAO-1.4.0.md) para o anel animado, os critérios de cálculo do mês e os novos links do autor.

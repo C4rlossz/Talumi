@@ -1,6 +1,6 @@
 # Política de privacidade do Talumi
 
-Versão documental 1.0 — 22/10/2026 — aplicativo 1.3.0.
+Versão documental 1.1 — 22/10/2026 — aplicativo 1.4.0.
 
 ## Responsável e contato
 
@@ -23,6 +23,10 @@ As consultas estão habilitadas inicialmente para manter a função de taxas onl
 Backup JSON e solicitações em texto são gravados somente no destino que você escolhe no seletor de arquivos do Android. O provedor de arquivos pode ser local ou nuvem, conforme sua escolha. Os arquivos não são criptografados pelo Talumi. Quem acessar um backup poderá ler seus registros. Backup automático do Android está desabilitado na configuração do aplicativo, sujeito aos comportamentos do sistema e fabricante.
 
 Os formulários de LGPD e acessibilidade não consultam o banco financeiro e não são enviados por servidor ou e-mail automaticamente. Nome e e-mail de resposta são opcionais. O texto inclui somente os campos preenchidos, a data e a versão do aplicativo. Você decide se encaminha o arquivo ao contato público. Não anexe backup financeiro a uma solicitação comum.
+
+## Relatórios e links do autor
+
+Os relatórios mensais são calculados no aparelho a partir dos registros locais, sem serviço externo de gráficos. Os botões de GitHub e LinkedIn abrem o navegador ou aplicativo externo somente após um toque. Nenhum saldo ou registro financeiro é incluído nesses links. A visita ao serviço externo fica sujeita às práticas de privacidade desse serviço.
 
 ## Se você enviar contato ao autor
 

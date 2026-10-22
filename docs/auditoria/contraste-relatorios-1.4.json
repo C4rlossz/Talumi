@@ -1,0 +1,50 @@
+[
+  {
+    "tema": "Claro",
+    "elemento": "Entrada / anel",
+    "cor": "0F765E",
+    "fundo": "FFFFFF",
+    "razao": 5.565397502045159,
+    "minimo": 4.5
+  },
+  {
+    "tema": "Claro",
+    "elemento": "Saída / anel",
+    "cor": "BA3550",
+    "fundo": "FFFFFF",
+    "razao": 5.655957354262578,
+    "minimo": 4.5
+  },
+  {
+    "tema": "Claro",
+    "elemento": "Categoria / progresso",
+    "cor": "7047EB",
+    "fundo": "FFFFFF",
+    "razao": 5.5410785353573235,
+    "minimo": 4.5
+  },
+  {
+    "tema": "Escuro",
+    "elemento": "Entrada / anel",
+    "cor": "62D7B0",
+    "fundo": "1E192A",
+    "razao": 9.665657613930753,
+    "minimo": 4.5
+  },
+  {
+    "tema": "Escuro",
+    "elemento": "Saída / anel",
+    "cor": "FF8FA3",
+    "fundo": "1E192A",
+    "razao": 7.909045548440932,
+    "minimo": 4.5
+  },
+  {
+    "tema": "Escuro",
+    "elemento": "Categoria / progresso",
+    "cor": "B69AFF",
+    "fundo": "1E192A",
+    "razao": 7.375852262536374,
+    "minimo": 4.5
+  }
+]

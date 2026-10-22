@@ -115,6 +115,7 @@ class MainActivity: ComponentActivity() {
         var movementFilter by rememberSaveable { mutableStateOf("Todos") }
         val month=YearMonth.parse(monthText)
         var settings by remember { mutableStateOf(false) }
+        var about by remember { mutableStateOf(false) }
         var legalCenter by remember {mutableStateOf(false)}
         var accountForm by remember { mutableStateOf<Account?>(null) }
         var entryForm by remember { mutableStateOf<Entry?>(null) }
@@ -127,8 +128,8 @@ class MainActivity: ComponentActivity() {
         val exporter=rememberLauncherForActivityResult(ActivityResultContracts.CreateDocument("application/json")) { it?.let(vm::export) }
         val importer=rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { restoreUri=it }
         fun newEntry(kind: EntryKind=EntryKind.EXPENSE) { entryForm=Entry(title="",amount=0,kind=kind,accountId=state.financeAccounts.firstOrNull()?.id ?: 0,date=LocalDate.now(),posted=true) }
-        val tabs=listOf("Início","Movimentos","Agenda","Contas","Pessoas")
-        val icons=listOf(Icons.Rounded.Home,Icons.AutoMirrored.Rounded.ReceiptLong,Icons.Rounded.CalendarMonth,Icons.Rounded.AccountBalanceWallet,Icons.Rounded.People)
+        val tabs=listOf("Início","Movimentos","Agenda","Contas","Pessoas","Relatórios")
+        val icons=listOf(Icons.Rounded.Home,Icons.AutoMirrored.Rounded.ReceiptLong,Icons.Rounded.CalendarMonth,Icons.Rounded.AccountBalanceWallet,Icons.Rounded.People,Icons.Rounded.DonutLarge)
         Scaffold(
             containerColor=MaterialTheme.colorScheme.background,
             snackbarHost={ SnackbarHost(snackbar) },
@@ -137,6 +138,7 @@ class MainActivity: ComponentActivity() {
                     Row(Modifier.fillMaxWidth().padding(start=24.dp,end=12.dp,top=12.dp,bottom=8.dp),verticalAlignment=Alignment.CenterVertically) {
                         ChipMark(Modifier.size(36.dp))
                         Text("talumi",Modifier.padding(start=10.dp).weight(1f),fontSize=26.sp,fontWeight=FontWeight.ExtraBold,letterSpacing=(-1).sp)
+                        IconButton(onClick={ about=true }) { Icon(Icons.Rounded.Info,"Informações do aplicativo") }
                         IconButton(onClick={ settings=true }) { Icon(Icons.Rounded.Tune,"Configurações e backup") }
                     }
                     WalletSwitcher(investmentMode) {investmentMode=it}
@@ -144,12 +146,13 @@ class MainActivity: ComponentActivity() {
                 }
             },
             bottomBar={ if(!investmentMode) NavigationBar(containerColor=MaterialTheme.colorScheme.surface,tonalElevation=0.dp) {
-                tabs.forEachIndexed { index,label -> NavigationBarItem(selected=tab==index,onClick={tab=index},icon={Icon(icons[index],null)},label={Text(label,fontSize=10.sp)},colors=NavigationBarItemDefaults.colors(indicatorColor=MaterialTheme.colorScheme.primaryContainer)) }
+                tabs.forEachIndexed { index,label -> NavigationBarItem(selected=tab==index,onClick={tab=index},icon={Icon(icons[index],null)},label={Text(label,fontSize=10.sp,maxLines=1,overflow=TextOverflow.Ellipsis)},colors=NavigationBarItemDefaults.colors(indicatorColor=MaterialTheme.colorScheme.primaryContainer)) }
             } },
-            floatingActionButton={ if(state.loaded) FloatingActionButton(onClick={ when { investmentMode -> investmentForm=Account(name="",kind=AccountKind.INVESTMENT); tab==3 -> accountForm=Account(name=""); tab==4 -> debtForm=Debt(person="",title="",amount=0,kind=DebtKind.RECEIVABLE,due=LocalDate.now()); state.financeAccounts.isEmpty() -> accountForm=Account(name=""); else -> newEntry() } },containerColor=Violet,contentColor=Color.White) { Icon(Icons.Rounded.Add,if(investmentMode) "Novo investimento" else when(tab) { 3 -> "Nova conta"; 4 -> "Novo compromisso"; else -> "Novo lançamento" }) } }
+            floatingActionButton={ if(state.loaded && (investmentMode || tab!=5)) FloatingActionButton(onClick={ when { investmentMode -> investmentForm=Account(name="",kind=AccountKind.INVESTMENT); tab==3 -> accountForm=Account(name=""); tab==4 -> debtForm=Debt(person="",title="",amount=0,kind=DebtKind.RECEIVABLE,due=LocalDate.now()); state.financeAccounts.isEmpty() -> accountForm=Account(name=""); else -> newEntry() } },containerColor=Violet,contentColor=Color.White) { Icon(Icons.Rounded.Add,if(investmentMode) "Novo investimento" else when(tab) { 3 -> "Nova conta"; 4 -> "Novo compromisso"; else -> "Novo lançamento" }) } }
         ) { padding ->
             if(!state.loaded) Box(Modifier.fillMaxSize().padding(padding),contentAlignment=Alignment.Center) { Column(horizontalAlignment=Alignment.CenterHorizontally) { CircularProgressIndicator(); Text("Preparando suas finanças…",Modifier.padding(16.dp)) } }
             else if(investmentMode) InvestmentScreen(state,month,{monthText=it.toString()},ratesBusy,ratesMessage,{vm.refreshRates(true)},{investmentForm=it},{a,action->investmentMove=a to action},{detail=it},Modifier.padding(padding))
+            else if(tab==5) MonthlyReportScreen(state,month,{monthText=it.toString()},{tab=1},Modifier.padding(padding))
             else LazyColumn(Modifier.fillMaxSize().padding(padding),state=scrollStates[tab],contentPadding=PaddingValues(start=20.dp,end=20.dp,top=12.dp,bottom=96.dp),verticalArrangement=Arrangement.spacedBy(16.dp)) {
                 item { Row(Modifier.fillMaxWidth(),verticalAlignment=Alignment.CenterVertically) {
                     Column(Modifier.weight(1f)) { Text(if(tab==0) "Seu dinheiro, com clareza." else tabs[tab],fontSize=if(tab==0) 22.sp else 28.sp,fontWeight=FontWeight.Bold); Text(when(tab) {0->"Tudo no seu ritmo. Tudo em um lugar.";1->"Cada movimento conta.";2->"Planeje hoje. Respire amanhã.";3->"Saiba onde seu dinheiro está.";else->"Combinados claros, contas em dia."},style=MaterialTheme.typography.bodyMedium,color=MaterialTheme.colorScheme.onSurfaceVariant) }
@@ -222,6 +225,7 @@ class MainActivity: ComponentActivity() {
         val creatorDescription=androidx.compose.ui.res.stringResource(R.string.creator_description)
         val creatorGithub=androidx.compose.ui.res.stringResource(R.string.creator_github_url)
         val uriHandler=androidx.compose.ui.platform.LocalUriHandler.current
+        if(about) AboutTalumi {about=false}
         if(legalCenter) LegalCenter(vm,busy) {legalCenter=false}
         if(settings) AlertDialog(onDismissRequest={settings=false},title={Text("Do seu jeito")},text={Column(Modifier.verticalScroll(rememberScrollState()),verticalArrangement=Arrangement.spacedBy(12.dp)) {
             OutlinedButton(onClick={settings=false;legalCenter=true},modifier=Modifier.fillMaxWidth()) {Text("Privacidade, acessibilidade e licenças")}

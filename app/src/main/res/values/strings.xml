@@ -1,6 +1,8 @@
 <resources>
     <string name="creator_name">Carlos Eduardo</string>
     <string name="creator_description">Projeto autoral de portfólio</string>
-    <string name="creator_github_url" translatable="false"></string>
+    <string name="creator_github_url" translatable="false">https://github.com/C4rlossz/Talumi</string>
+    <string name="creator_profile_github_url" translatable="false">https://github.com/C4rlossz</string>
+    <string name="creator_linkedin_url" translatable="false">https://www.linkedin.com/in/carlos-eduardo-a8bb50268/</string>
     <string name="author_contact_email" translatable="false">Carlosz.eduardo1402@gmail.com</string>
 </resources>

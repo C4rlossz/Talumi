@@ -77,7 +77,39 @@ class AppFlowTest {
         compose.onNode(hasText("Contas") and hasClickAction()).performClick()
         compose.onNodeWithText("Banco teste").assertExists()
         verifyInvestmentWallet()
+        verifyReportsAndAbout()
         verifyPrivacyControls()
+    }
+
+    private fun verifyReportsAndAbout() {
+        compose.onNode(hasText("Relatórios") and hasClickAction()).performClick()
+        compose.onNodeWithText("Relatório do mês").assertIsDisplayed()
+        compose.onNodeWithText("Resultado do mês").assertExists()
+        compose.onNodeWithContentDescription("Gráfico do mês.",substring=true).assertExists()
+        compose.onNodeWithContentDescription("Novo lançamento").assertDoesNotExist()
+        compose.onNodeWithContentDescription("Mês anterior").performClick()
+        compose.onNodeWithText("Sem movimentos").assertExists()
+        compose.onNodeWithContentDescription("Próximo mês").performClick()
+        compose.onNodeWithText("Resultado positivo").assertExists()
+        compose.onNode(hasScrollAction()).performScrollToNode(hasText("Ver movimentos do mês"))
+        compose.onNodeWithText("Ver movimentos do mês").performScrollTo().performClick()
+        compose.onNode(hasScrollAction()).performScrollToNode(hasText("Freelance teste"))
+        compose.onNodeWithText("Freelance teste").assertExists()
+        compose.onNodeWithContentDescription("Informações do aplicativo").performClick()
+        compose.onNodeWithText("Sobre o Talumi").assertExists()
+        compose.onNodeWithText("Talumi 1.4.0 · Android").assertExists()
+        compose.onNodeWithText("Tecnologias").assertExists()
+        compose.onNodeWithText("GitHub de Carlos Eduardo").performScrollTo().assertIsDisplayed()
+        compose.onNodeWithText("LinkedIn de Carlos Eduardo").performScrollTo().assertIsDisplayed()
+        assertEquals("https://github.com/C4rlossz",compose.activity.getString(R.string.creator_profile_github_url))
+        assertEquals("https://www.linkedin.com/in/carlos-eduardo-a8bb50268/",compose.activity.getString(R.string.creator_linkedin_url))
+        compose.onNodeWithText("Concluir").performClick()
+        compose.onNodeWithContentDescription("Configurações e backup").performClick()
+        compose.onNodeWithText("Escuro").performClick()
+        compose.onNodeWithText("Claro").performClick()
+        compose.onNodeWithText("Concluir").performClick()
+        compose.onNode(hasText("Relatórios") and hasClickAction()).performClick()
+        compose.onNodeWithText("Resultado positivo").assertExists()
     }
 
     private fun verifyInvestmentWallet() {
@@ -147,7 +179,7 @@ class AppFlowTest {
         compose.waitUntil(10000) {compose.onAllNodesWithText("Privacidade e acessibilidade").fetchSemanticsNodes().isNotEmpty()}
         compose.onNodeWithText("Carlosz.eduardo1402@gmail.com").assertExists()
         compose.onNodeWithText("Política de privacidade").performScrollTo().performClick()
-        compose.onNodeWithText("Versão documental 1.0",substring=true).assertExists()
+        compose.onNodeWithText("Versão documental 1.1",substring=true).assertExists()
         compose.onNodeWithText("Voltar").performClick()
         compose.onNodeWithText("Formulário de acessibilidade").performScrollTo().performClick()
         compose.onNodeWithText("Nome (opcional)").assertExists()
@@ -165,5 +197,7 @@ class AppFlowTest {
         compose.waitUntil(10000) {compose.onAllNodesWithText("Privacidade e acessibilidade").fetchSemanticsNodes().isEmpty()}
         compose.onNode(hasText("Contas") and hasClickAction()).performClick()
         compose.onNodeWithText("Onde está seu dinheiro?").assertExists()
+        compose.onNode(hasText("Relatórios") and hasClickAction()).performClick()
+        compose.onNodeWithText("Sem movimentos").assertExists()
     }
 }
